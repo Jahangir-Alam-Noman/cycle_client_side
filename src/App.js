@@ -8,6 +8,7 @@ import Register from "./Pages/Login/Register/Register";
 import NotFound from "./Pages/NotFound/NotFound";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import AuthProvider from "./context/AuthProvider";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 function App() {
   return (
     <div className='App'>
@@ -18,7 +19,8 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/home' element={<Home />} />
             <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<Register />} />
+            <Route path='/register' element={<PrivateRoute><Register /></PrivateRoute>} />
+         
             <Route path='*' element={<NotFound />} />
           </Routes>
           <Footer></Footer>
@@ -28,3 +30,5 @@ function App() {
   );
 }
 export default App;
+
+
