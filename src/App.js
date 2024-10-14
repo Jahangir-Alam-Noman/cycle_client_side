@@ -19,8 +19,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/home' element={<Home />} />
             <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<PrivateRoute><Register /></PrivateRoute>} />
-         
+            <Route path='/register' element={<PrivateRoute><Register /></PrivateRoute>} />  
             <Route path='*' element={<NotFound />} />
           </Routes>
           <Footer></Footer>
