@@ -3,6 +3,7 @@ import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import useAuth from '../../../hooks/useAuth';
+import logo from '../../../images/logo.png';
 
 
 const Header = () => {
@@ -10,7 +11,9 @@ const Header = () => {
     return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+          <Navbar.Brand href="#">
+          <Link to="/home"> <img src={logo} alt="" /></Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
